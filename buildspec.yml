@@ -5,6 +5,7 @@ phases:
     runtime-versions:
       nodejs: 10
     commands:
+      - echo "started build, command phase"
       # Install dependencies needed for running tests
       - npm install
 
