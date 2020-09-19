@@ -15,12 +15,24 @@ phases:
     commands:
       # Discover and run unit tests in the 'tests' directory
       - echo "skipping test"
+      - rm -rf ./app
+      - mkdir ./app
+      - cp -r ./.ebextensions ./app
+      - cp -r ./public ./app
+      - cp -r ./tests ./app
+      
+      - cp -r ./app.js ./app
+      - cp -r ./buildspec.yml ./app
+      - cp -r ./package.json ./app
+      - cp -r ./template-configuration.json ./app
+      - cp -r ./template.yml ./app
+      - cd app
       # - npm test
   post_build:
     commands:
       # - cd app 
       # Remove existing node_modules to clear dev dependencies
-      - rm -r node_modules
+      # - rm -r node_modules
 
       # Install runtime dependencies
       - npm install --production
