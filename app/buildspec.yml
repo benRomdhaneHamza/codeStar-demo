@@ -18,7 +18,6 @@ phases:
       # - npm test
   post_build:
     commands:
-      - cd app 
       # Remove existing node_modules to clear dev dependencies
       - rm -r node_modules
 
