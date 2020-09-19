@@ -20,7 +20,7 @@ phases:
     commands:
       - cd app 
       # Remove existing node_modules to clear dev dependencies
-      - rm -r node_modules
+      # - rm -r node_modules
 
       # Install runtime dependencies
       - npm install --production
