@@ -33,6 +33,7 @@ phases:
       # Remove existing node_modules to clear dev dependencies
       # - rm -r node_modules
       - rm -rf ./tests
+      - ls
       # Install runtime dependencies
       - npm install --production
 
