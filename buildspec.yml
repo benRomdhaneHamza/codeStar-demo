@@ -16,12 +16,12 @@ phases:
       # Discover and run unit tests in the 'tests' directory
       - echo "skipping test"
       - rm -rf ./tests
-#       - rm -rf ./app
-#       - mkdir ./app
-#       - cp -r ./public ./app
-#       - cp -r ./tests ./app
-#       - cp -r ./app.js ./app
-#       - cp -r ./package.json ./app
+      - rm -rf ./app
+      - mkdir ./app
+      - cp -r ./public ./app
+      - cp -r ./tests ./app
+      - cp -r ./app.js ./app
+      - cp -r ./package.json ./app
 #       - cd app
 #       - cp -r ./* ../
 #       - cd ..
@@ -44,6 +44,4 @@ phases:
       - sed -i.bak 's/\$PARTITION\$/'${PARTITION}'/g;s/\$AWS_REGION\$/'${AWS_REGION}'/g;s/\$ACCOUNT_ID\$/'${ACCOUNT_ID}'/g;s/\$PROJECT_ID\$/'${PROJECT_ID}'/g' template-configuration.json
 artifacts:
   files:
-    - template-export.yml
-    - template-configuration.json
-   discard-paths: yes
+    - '**/*'
