@@ -46,3 +46,4 @@ artifacts:
   files:
     - template-export.yml
     - template-configuration.json
+   discard-paths: yes
