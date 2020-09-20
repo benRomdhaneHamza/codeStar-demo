@@ -24,7 +24,7 @@ phases:
       - cd app
       - cp -r ./* ../
       - cd ..
-      - rm -rf ./app
+      # - rm -rf ./app
       # - npm test
   post_build:
     commands:
