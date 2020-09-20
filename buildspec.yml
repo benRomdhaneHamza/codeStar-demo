@@ -15,7 +15,7 @@ phases:
     commands:
       # Discover and run unit tests in the 'tests' directory
       - echo "skipping test"
-      - rm -rf ./test
+      - rm -rf ./tests
 #       - rm -rf ./app
 #       - mkdir ./app
 #       - cp -r ./public ./app
@@ -32,7 +32,7 @@ phases:
       # - cd app 
       # Remove existing node_modules to clear dev dependencies
       # - rm -r node_modules
-
+      - rm -rf ./tests
       # Install runtime dependencies
       - npm install --production
 
